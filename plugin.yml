@@ -1,0 +1,22 @@
+name: PlaceStash
+version: '${project.version}'
+main: com.placestash.PlaceStash
+api-version: '1.21'
+description: Buries bait stashes (spawner + candle cake) inside solid terrain and alerts staff when someone digs them out.
+
+commands:
+  placestash:
+    description: Place or manage bait stashes
+    usage: /placestash [list | remove]
+    permission: placestash.use
+
+permissions:
+  placestash.use:
+    description: Place and manage stashes
+    default: op
+  placestash.alert:
+    description: Get an alert when a stash is broken
+    default: op
+  placestash.exempt:
+    description: Breaking a stash does not trigger an alert (staff)
+    default: false

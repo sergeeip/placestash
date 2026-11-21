@@ -1,0 +1,29 @@
+# Mob type inside the spawner. Buried in solid rock it can't actually spawn anything.
+spawner-type: ZOMBIE
+
+# Candle on the cake is lit (looks more like a real base).
+candle-lit: true
+
+# Where /placestash buries it, relative to YOU:
+# a random spot between min-depth and max-depth blocks BELOW you,
+# up to horizontal-radius blocks to the side.
+min-depth: 8
+max-depth: 30
+horizontal-radius: 12
+attempts: 300
+
+# Optional commands run when someone breaks a stash. {player} is replaced.
+# Leave empty to only alert staff. Careful: an honest miner can tunnel into a
+# stash by accident, so check CoreProtect before banning anyone.
+# Example: - "tempban {player} 1d Suspected x-ray"
+punish-commands: []
+
+messages:
+  prefix: "<dark_gray>[<gold>Stash</gold>]</dark_gray> "
+  placed: "<green>Bait stash buried at <white>{x}, {y}, {z}</white> <gray>({depth} blocks below you)</gray>."
+  no-spot: "<red>Couldn't find solid terrain to bury it. Stand somewhere with lots of rock underneath and try again."
+  alert: "<red><bold>STASH BROKEN!</bold></red> <white>{player}</white> dug up the stash at <white>{x}, {y}, {z}</white> <gray>({world})</gray>"
+  removed: "<green>Removed the stash at <white>{x}, {y}, {z}</white>."
+  none-near: "<red>No stash within 10 blocks of you."
+  list-empty: "<gray>No active stashes."
+  no-permission: "<red>No permission."
